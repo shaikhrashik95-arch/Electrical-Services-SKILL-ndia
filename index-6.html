@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electrical Services | Company Information</title>
+<style>
+:root{--navy:#123d7a;--gold:#d6ad38;--ink:#172e50;--paper:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:#edf1f6;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.sheet{max-width:900px;margin:16px auto;background:var(--paper);padding:clamp(16px,3.5vw,36px);border:7px double var(--navy);outline:2px solid var(--gold);outline-offset:-14px;position:relative}
+.top{display:grid;grid-template-columns:1fr 1.4fr 1fr;align-items:center;gap:10px;text-align:center;padding:8px 0 20px;border-bottom:2px solid var(--gold)}
+.brand{font-weight:800;color:var(--navy);font-size:clamp(15px,2.6vw,22px)}
+.brand small{display:block;font-size:11px;line-height:1.5;color:#222}
+.symbol{font-size:clamp(35px,5vw,54px);color:#f3b800;line-height:1}
+.company h1{font-size:clamp(23px,4.4vw,40px);line-height:1.05;margin:5px 0;color:var(--navy);letter-spacing:.5px}
+.company p{margin:0;font-size:clamp(10px,1.7vw,14px);font-weight:700;letter-spacing:1.2px}
+.ministry{font-size:11px;font-weight:700;line-height:1.4}
+.ministry .emblem{font-size:30px}
+.banner{margin:20px auto 15px;max-width:440px;background:var(--navy);color:white;text-align:center;padding:10px 18px;font-weight:800;letter-spacing:1px;clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%)}
+.intro{text-align:center;line-height:1.6;max-width:680px;margin:0 auto 20px}
+.grid{display:grid;grid-template-columns:1fr;gap:8px;max-width:730px;margin:auto}
+.row{display:grid;grid-template-columns:minmax(125px, .9fr) 15px 1.4fr;gap:7px;padding:8px 10px;border:1px solid #d8e0ec;border-radius:4px}
+.row strong{font-size:14px}.row span{overflow-wrap:anywhere}
+.codes{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;margin:26px 0 18px}
+.codebox{text-align:center;padding:14px;border:1px solid #d6deea;border-radius:8px;min-width:0}
+.codebox h3{color:var(--navy);margin:0 0 10px}
+#qrcode{min-height:150px;display:flex;justify-content:center;align-items:center;overflow:hidden}
+#qrcode img,#qrcode canvas{max-width:100%;height:auto}
+#barcode{max-width:100%;height:80px}
+.codebox p{font-size:12px;line-height:1.5;margin:8px 0 0}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:14px 0}
+.feature{text-align:center;font-size:12px;line-height:1.4;border-right:1px solid #eadcae;padding:4px}
+.feature:last-child{border-right:0}.feature b{display:block;font-size:21px;color:var(--navy);margin-bottom:5px}
+.foot{text-align:center;padding-top:15px;font-size:12px;letter-spacing:.3px}
+.notice{font-size:12px;color:#56657b;text-align:center;line-height:1.5;margin:15px auto 0;max-width:700px}
+.url{overflow-wrap:anywhere;font-weight:700}
+@media(max-width:580px){.top{grid-template-columns:1fr 1.5fr;}.ministry{display:none}.codes{grid-template-columns:1fr}.row{grid-template-columns:125px 10px 1fr}.features{grid-template-columns:repeat(3,1fr)}.feature:nth-child(3){border-right:0}}
+@media print{body{background:#fff}.sheet{margin:0;max-width:none;box-shadow:none}}
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="top">
+    <div class="brand">
+      <div style="font-size:36px">▣</div>
+      Skill India
+      <small>कौशल भारत • कुशल भारत</small>
+    </div>
+    <div class="company">
+      <div class="symbol">⚡</div>
+      <h1>ELECTRICAL SERVICES</h1>
+      <p>SKILL DEVELOPMENT &amp; TRAINING</p>
+      <p style="margin-top:7px;font-weight:500;letter-spacing:1px">SKILLED PEOPLE&nbsp; | &nbsp;SAFE WORK&nbsp; | &nbsp;BRIGHTER FUTURE</p>
+    </div>
+    <div class="ministry"><div class="emblem">✦</div>COMPANY INFORMATION<br>PARTNERSHIP DETAILS</div>
+  </header>
+
+  <div class="banner">COMPANY INFORMATION</div>
+  <p class="intro">This page displays company information for Electrical Services, including its electrical service category and skill-development focus. Any Skill India association should be represented only as authorized and verifiable.</p>
+
+  <section class="grid" aria-label="Company details">
+    <div class="row"><strong>Company Name</strong><span>:</span><span>Electrical Services</span></div>
+    <div class="row"><strong>Partner / Affiliation</strong><span>:</span><span>Skill India (only where officially authorized)</span></div>
+    <div class="row"><strong>Service Category</strong><span>:</span><span>Electrical Services</span></div>
+    <div class="row"><strong>Training &amp; Development</strong><span>:</span><span>Electrical skills and safety awareness</span></div>
+    <div class="row"><strong>Location</strong><span>:</span><span>West Bengal, India</span></div>
+    <div class="row"><strong>Record ID</strong><span>:</span><span>ES-INFO-001</span></div>
+  </section>
+
+  <section class="codes">
+    <div class="codebox">
+      <h3>QR Code</h3>
+      <div id="qrcode"><span>Generating QR code…</span></div>
+      <p>Scan to open this company information page.</p>
+      <p>Page URL: <span id="pageUrl" class="url"></span></p>
+    </div>
+    <div class="codebox">
+      <h3>Barcode</h3>
+      <svg id="barcode" role="img" aria-label="Barcode encoding ELECTRICAL SERVICES"></svg>
+      <p><strong>ELECTRICAL SERVICES</strong></p>
+      <p>Code 128 barcode; scanner compatibility may vary.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature"><b>⚡</b>Electrical<br>Services</div>
+    <div class="feature"><b>⚒</b>Technical<br>Training</div>
+    <div class="feature"><b>✓</b>Safety<br>First</div>
+    <div class="feature"><b>✦</b>Skill<br>Development</div>
+    <div class="feature"><b>◎</b>Better<br>Future</div>
+  </section>
+  <div class="foot">Electrical Services &nbsp; | &nbsp; Company Information</div>
+  <p class="notice">This is a company information page, not an official certificate or proof of Skill India affiliation. The QR code points to this page’s URL; publish this file on GitHub Pages before testing it from another device.</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+<script>
+(function(){
+  const url=window.location.href.split('#')[0];
+  document.getElementById('pageUrl').textContent=url;
+  const q=document.getElementById('qrcode');
+  if(window.QRCode){
+    q.innerHTML='';
+    new QRCode(q,{text:url,width:180,height:180,colorDark:'#111827',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+  } else {q.textContent='QR code library did not load. Check internet and reload.';}
+  if(window.JsBarcode){
+    JsBarcode('#barcode','ELECTRICAL SERVICES',{format:'CODE128',lineColor:'#111827',background:'#ffffff',width:2,height:62,displayValue:false,margin:8});
+  } else {document.getElementById('barcode').outerHTML='<p>Barcode library did not load. Check internet and reload.</p>';}
+})();
+</script>
+</body>
+</html>
